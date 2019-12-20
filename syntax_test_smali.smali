@@ -1,3 +1,10 @@
+# SYNTAX TEST "Packages/User/sublime-smali/smali.sublime-syntax"
+
+# Converted from the original to Sublime's automated test format. I don't see
+# scope assertions, so I assume the original was just for ad-hoc eyeball
+# testing, not automated testing. Only things I modified, therefore, have
+# assertions now. - ju
+
 # TODO:
 # Explore full plugin potential, ie. possible to highlight matching :labels ?
 # Highlight #// comments differently -- user comment, not auto generated
