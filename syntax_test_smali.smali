@@ -603,6 +603,7 @@
 .end method
 
 .method private test_35c()V
+#               ^^^^^^^^ entity.name.function.smali
   # Test Coverage - op {vC, vD, vE, vF, vG}, type@BBBB
   filled-new-array {v0, v0}, [LçjΩ7ç/UNICODE;
   filled-new-array {v0, v0}, [I
@@ -612,6 +613,7 @@
   # TODO: True correctness is beyond my knowledge. There's a disconnect between
   # number of {} parameters and method parameters
   invoke-virtual { v0 }, Lasdf;->a([I[Lasdf;[Lasdf;[Lasdf;[Lasdf;)V
+  #                              ^ variable.function.smali meta.function-call.smali
   invoke-static { }, Lasdf;->cool$Method()[Lsome/Class;
   invoke-static {v0}, Lo/Ȋ$CON;->ˮ͍(Ljava/lang/String;)Ljava/lang/Class;
   invoke-virtual {v0}, [Lcom/google/b/ad;->clone()Ljava/lang/Object; # from an enum's values() method

@@ -247,7 +247,7 @@ contexts:
         11: entity.name.tag.smali
         12: constant.numeric.smali
         13: entity.name.tag.smali
-        14: entity.name.function.smali
+        14: variable.function.smali meta.function-call.smali
         15: constant.numeric.smali
         16: constant.numeric.smali
         17: constant.numeric.smali
@@ -607,7 +607,7 @@ contexts:
         7: entity.name.tag.smali
         8: constant.numeric.smali
         9: entity.name.tag.smali
-        10: entity.name.function.smali
+        10: variable.function.smali meta.function-call.smali
         11: constant.numeric.smali
         12: entity.name.tag.smali
         13: constant.numeric.smali
