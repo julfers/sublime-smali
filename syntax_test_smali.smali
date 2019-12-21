@@ -643,6 +643,7 @@
 
   # Test Coverage - op {vCCCC .. vNNNN}, meth@BBBB
   invoke-virtual/range {v0 .. v0}, Lsome/Obj;->asdf()V
+  #                                            ^^^^ variable.function.smali meta.function-call.smali
   invoke-super/range {v0 .. v0}, Lsome/Obj;->someMethod()[LsomeReturn/Class;
   invoke-direct/range {v0 .. v0},   Lsome/Obj;->someMethod(II[Lsome;I[III[III[IIIIS)V
   invoke-static/range { v0 .. v0 }, [Lsome/Obj;->someMethod(Ljava/lang/String;)[I

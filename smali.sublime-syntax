@@ -662,7 +662,7 @@ contexts:
         4: entity.name.tag.smali
         5: constant.numeric.smali
         6: entity.name.tag.smali
-        7: entity.name.function.smali
+        7: variable.function.smali meta.function-call.smali
         8: constant.numeric.smali
         9: constant.numeric.smali
         10: constant.numeric.smali
