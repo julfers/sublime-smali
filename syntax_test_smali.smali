@@ -2,8 +2,8 @@
 
 # Converted from the original to Sublime's automated test format. I don't see
 # scope assertions, so I assume the original was just for ad-hoc eyeball
-# testing, not automated testing. Only things I modified, therefore, have
-# assertions now. - ju
+# testing, not automated testing. Things I modified, have assertions now, but
+# I didn't add assertions to old stuff. - ju
 
 # TODO:
 # Explore full plugin potential, ie. possible to highlight matching :labels ?
@@ -11,13 +11,22 @@
 # Highlight escaped characters in strings.
 
 .class interface abstract Landroid/support/v13/app/FragmentCompat$FragmentCompatImpl;
+# Class fully-qualified name probably ought to be split into a path part and a
+# classname part
 .class public final enum Lcom/google/ads/AdRequest$ErrorCode;
+#                                                           ^ punctuation.terminator.classname.smali
+#                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ entity.name.class.smali
+#                        ^ storage.type.object.smali
 .class public final LTestClass; # commenty;
 .class public interface abstract annotation Landroid/annotation/TargetApi;
 .class public Lo/AUX$ঽ্;
 
 .class Lcom/flashp/data/$55$5;
 .super Ljava/lang/Object;
+#                       ^ punctuation.terminator.classname.smali
+#       ^^^^^^^^^^^^^^^^ entity.other.inherited-class.smali
+#      ^ storage.type.object.smali
+
 .source "DoesNotExistBecauseHardcore.java" # comment
 
 # interfaces
@@ -614,6 +623,9 @@
   # number of {} parameters and method parameters
   invoke-virtual { v0 }, Lasdf;->a([I[Lasdf;[Lasdf;[Lasdf;[Lasdf;)V
   #                              ^ variable.function.smali meta.function-call.smali
+  #                           ^ punctuation.terminator.classname.smali 
+  #                       ^^^^ meta.path.smali
+  #                      ^ storage.type.object.smali
   invoke-static { }, Lasdf;->cool$Method()[Lsome/Class;
   invoke-static {v0}, Lo/Ȋ$CON;->ˮ͍(Ljava/lang/String;)Ljava/lang/Class;
   invoke-virtual {v0}, [Lcom/google/b/ad;->clone()Ljava/lang/Object; # from an enum's values() method
@@ -643,6 +655,10 @@
 
   # Test Coverage - op {vCCCC .. vNNNN}, meth@BBBB
   invoke-virtual/range {v0 .. v0}, Lsome/Obj;->asdf()V
+  #                                            ^^^^ variable.function.smali meta.function-call.smali
+  #                                         ^ punctuation.terminator.classname.smali 
+  #                                 ^^^^^^^^ meta.path.smali
+  #                                ^ storage.type.object.smali
   invoke-super/range {v0 .. v0}, Lsome/Obj;->someMethod()[LsomeReturn/Class;
   invoke-direct/range {v0 .. v0},   Lsome/Obj;->someMethod(II[Lsome;I[III[III[IIIIS)V
   invoke-static/range { v0 .. v0 }, [Lsome/Obj;->someMethod(Ljava/lang/String;)[I

@@ -22,16 +22,16 @@ contexts:
       captures:
         1: constant.language.smali
         2: variable.parameter.smali
-        3: entity.name.tag.smali
-        4: string.quoted.double.smali
-        5: entity.name.tag.smali
+        3: storage.type.object.smali
+        4: entity.name.class.smali
+        5: punctuation.terminator.classname.smali
     - match: '^[\s\t]*(\.(?:super|implements))[\s\t]+(L)([\p{L}_\$][\p{L}\d_\$]*(?:/[\p{L}_\$][\p{L}\d_\$]*)*)(;)(?=[\s\t]*(#.*)?$)'
       comment: Super / implements class name
       captures:
         1: constant.language.smali
-        2: entity.name.tag.smali
-        3: string.quoted.double.smali
-        4: entity.name.tag.smali
+        2: storage.type.object.smali
+        3: entity.other.inherited-class.smali
+        4: punctuation.terminator.classname.smali
     - match: '^[\s\t]*(\.source)[\s\t]+(")(.*?)((?<!\\)")(?=[\s\t]*(#.*)?$)(?=[\s\t]*(#.*)?$)'
       comment: Source file
       captures:
@@ -604,9 +604,9 @@ contexts:
         4: variable.parameter.smali
         5: variable.parameter.smali
         6: variable.parameter.smali
-        7: entity.name.tag.smali
-        8: constant.numeric.smali
-        9: entity.name.tag.smali
+        7: storage.type.object.smali
+        8: meta.path.smali
+        9: punctuation.terminator.classname.smali
         10: variable.function.smali meta.function-call.smali
         11: constant.numeric.smali
         12: entity.name.tag.smali
@@ -659,10 +659,10 @@ contexts:
         1: support.function.smali
         2: variable.parameter.smali
         3: variable.parameter.smali
-        4: entity.name.tag.smali
-        5: constant.numeric.smali
-        6: entity.name.tag.smali
-        7: entity.name.function.smali
+        4: storage.type.object.smali
+        5: meta.path.smali
+        6: punctuation.terminator.classname.smali
+        7: variable.function.smali meta.function-call.smali
         8: constant.numeric.smali
         9: constant.numeric.smali
         10: constant.numeric.smali
