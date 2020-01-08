@@ -289,11 +289,9 @@ contexts:
       captures:
         1: keyword.control.smali
   directive-method-line:
-    - match: '[\s\t]*(\.line)[\s\t]+(\d+)(?=[\s\t]*(#.*)?$)'
+    - match: '[\s\t]*\.line[\s\t]+(\d+)(?=[\s\t]*(#.*)?$)'
       comment: Line
-      captures:
-        1: constant.language.smali
-        2: variable.parameter.smali
+      scope: comment.linenumber.smali
   directive-method-parameter:
     - match: '[\s\t]*(\.param(?:eter)?)[\s\t]+(p(?:0|[1-9][\d]?|[1-4][\d]{2}|50[\d]|51[0-2])\b)(?:,[\s\t]*(")(.*?)((?<!\\)"))?(?=[\s\t]*(#.*)?$)'
       comment: Parameter
